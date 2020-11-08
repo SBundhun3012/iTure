@@ -210,7 +210,6 @@ header{
 }
 
 
-
 .subtitle{
     font-size: 22px;
     font-weight: bold;
@@ -271,40 +270,54 @@ header{
     -webkit-transition: all ease 0.3s;
 }
 
+.site-btn2:focus {
+        outline: none;
+}
+
 
 /*------------------------ 2 Home Page ------------------------*/
 
 .wrapper{
     position: relative;
     z-index: 1;
-    background: #fff;
+    background: #FFFFFF;
     overflow: hidden;
     box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.10);
     padding-bottom: 90px;
-    animation: slideBg 50s linear infinite 0s;
+    background-image: url("https://media.istockphoto.com/photos/communication-network-concept-ai-picture-id990107150");
+    animation: slideBg 60s linear infinite 10s;
     background-repeat: no-repeat;
-    background-size: 100% 30%;
-
+    background-size: 100% 45%;
 }
+
 
 @keyframes slideBg{
 
     0% {
-        background-image: url("https://media.istockphoto.com/illustrations/technology-network-background-illustration-id1001279256") ;
+        background-image: url("https://media.istockphoto.com/photos/communication-network-concept-ai-picture-id990107150") ;
     }
     25% {
-        background-image: url("https://media.istockphoto.com/photos/north-and-south-america-red-connection-lines-copy-space-global-picture-id1213223956");
+        background-image: url("https://media.istockphoto.com/photos/concept-picture-id9576546380");
     }
     50% {
-        background-image: url("https://media.istockphoto.com/vectors/futuristic-idea-creativity-concept-with-glowing-low-polygonal-light-vector-id1185115592") ;
+        background-image: url("https://media.istockphoto.com/photos/light-bulb-in-hand-picture-id1039087980") ;
     }
     75% {
-        background-image: url("https://media.istockphoto.com/photos/economic-crisis-businessman-using-mobile-smartphone-analyzing-sales-picture-id1215836494") ;
+        background-image: url("https://media.istockphoto.com/photos/concept-picture-id9576546380") ;
     }
     100% {
-        background-image: url("https://media.istockphoto.com/photos/machine-learning-hands-of-robot-and-human-touching-on-big-data-picture-id1206796363") ;
+        background-image: url("https://media.istockphoto.com/photos/light-bulb-in-hand-picture-id1039087980") ;
     }
 
+}
+
+.wrapperrest{
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    overflow: hidden;
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.10);
+    padding-bottom: 90px;
 }
 
 .cont{
@@ -605,7 +618,10 @@ header{
 }
 
 .portfolio-single p{
-    line-height: 30px;
+    color: #5f5e5f;
+    letter-spacing: -1px;
+    font-size: 22px;
+    line-height: 38px;
 }
 
 .portfolio-lightbox figure img{
@@ -747,8 +763,22 @@ header.white .nav-icon span {
     width: 100%;
     border-radius: 10px;
     -webkit-border-radius: 10px;
-    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.15);
-    -webkit-box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.15);
+    /*-webkit-box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.15);*/
+    animation: float 6s ease-in-out infinite;
+    
+}
+
+@keyframes float{
+    0%{
+       transform:translateY(0px);
+    }
+    50%{
+       transform:translateY(-30px);
+    }
+     100%{
+       transform:translateY(0px);
+    }
+
 }
 
 
@@ -758,6 +788,13 @@ header.white .nav-icon span {
     font-size: 60px;  
     line-height: 65px;
     font-weight: 900;
+    text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
 }
 
 .portfolio-single.type-3 .information{
@@ -1056,7 +1093,7 @@ header.white .nav-icon span {
 
 footer{
     width: 100%;
-    padding: 60px 0 41px;
+    padding: 80px 0 1px;
     position: fixed;
     z-index: 0;
     bottom: 0;
@@ -1066,8 +1103,8 @@ footer{
 footer .copyright p{
     color: #979797;
     font-size: 14px;
-    margin-top: 8px;
-    font-weight: 400;
+    margin-top: 4px;
+    font-weight: 500;
 }
 
 
@@ -1080,13 +1117,14 @@ footer .social{
 footer .social a{
     background: #fff;
     color: #191919;
-    font-size: 12px;
+    font-size: 14px;
     padding: 6px 9px;
     display: inline-block;
     border-radius: 50px;
     margin-right: 8px;
     cursor: pointer;
 }
+
 
 footer .social a:hover{
     transition: all ease 0.3s;
@@ -1099,11 +1137,13 @@ footer .social a:hover{
 footer .getintouch{
     text-align: right;
     color: #000;
+    margin-top: 10px;
 }
 
 footer .getintouch a{
     font-size: 14px;
     color: #979797;
+
     text-decoration: none;
 }
 
@@ -1138,7 +1178,7 @@ footer .getintouch strong{
 }
 
 .about .about-text .subtitle{
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
     letter-spacing: -1px;
 }
@@ -1146,9 +1186,8 @@ footer .getintouch strong{
 .about .about-text p{
     color: #5f5e5f;
     font-size: 22px;
-    font-weight: bold;
     letter-spacing: -1px;
-    line-height: 35px;
+    line-height: 38px;
 }
 
 .owl-carousel.work-areas .area i:before{
@@ -1526,28 +1565,81 @@ footer .getintouch strong{
     text-decoration: none;
 }
 
+ .contact small{
+    visibility: hidden;
+    position: absolute;
+    left:15%;
+    top:70%;
+    }
+
+.error small{
+        color:#e74c3c;
+        visibility: visible;
+
+    }
+
+.contact i{
+    visibility: hidden;
+    position:absolute;
+    left:-5px;
+    top:25%;
+
+}
+
+.contact .success i.fa-check-circle{
+    color:#2ecc71;
+    visibility: visible;
+}
+
+.contact .error i.fa-exclamation-circle{
+    color:#e74c3c;
+    visibility: visible;
+}
+
+.contact span{
+    position:absolute;
+    left:90%;
+    top:80%;
+
+}
+
+.contact .alert {
+    color:#2ecc71;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    padding: 10px;
+    outline: 0;
+    text-decoration: underline;
+    display: none;
+}
+
+
+
 input.inp{
     width: 100%;
+    display: block;
     margin-bottom: 30px;
     border:solid 3px #212121;
     border-radius: 50px;
     -webkit-border-radius: 50px;
-    height: 54px;
+    height: 60px;
     font-size: 13px;
     padding-left: 15px;
     outline: 0;
-}
+    }
 
 textarea.form-message{
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border:solid 3px #212121;
-    border-radius: 23px;
+    border-radius: 50px;
     -webkit-border-radius: 23px;
     font-size: 13px;
     padding: 15px;
     outline: 0;
 }
+
 
 
 
@@ -1915,7 +2007,7 @@ textarea.form-message{
     }
 
     footer .social {
-        padding-bottom: 10px;
+        padding-bottom: 15px;
     }
 
     .widget-twitter, .tweet ul li  {
