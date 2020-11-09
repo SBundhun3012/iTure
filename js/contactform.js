@@ -1,6 +1,6 @@
 // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyDcDJ8uzv19RnE4ebZkg9E7FyL-rwf4mB8",
+    apiKey: "",
     authDomain: "iture-contactform.firebaseapp.com",
     databaseURL: "https://iture-contactform.firebaseio.com",
     projectId: "iture-contactform",
