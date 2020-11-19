@@ -1,6 +1,6 @@
 // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "",
+    apiKey: "AIzaSyDcDJ8uzv19RnE4ebZkg9E7FyL-rwf4mB8",
     authDomain: "iture-contactform.firebaseapp.com",
     databaseURL: "https://iture-contactform.firebaseio.com",
     projectId: "iture-contactform",
@@ -24,7 +24,8 @@ const email=getInputId('email');
 const telephone=getInputId('telephone');
 const mobile=getInputId('mobile');
 const message=getInputId('message');
-
+const policies_consent=getInputId('policiesconsent');
+const marketingemail=getInputId('marketingemail');
 
 form.addEventListener('submit',(e)=>{
 
@@ -236,7 +237,7 @@ function getInputId(id){
 }
 
 //Save messages to firebase
-function saveMessage(firstname,lastname,companyname,email,telephone,mobile,messages,timestampes){
+function saveMessage(firstname,lastname,companyname,email,telephone,mobile,messages,policiesConsent,marketingConsent,timestampes){
 	var newMessageRef=messagesRef.push();
 	newMessageRef.set({
 		Firstname:firstname,
@@ -246,6 +247,8 @@ function saveMessage(firstname,lastname,companyname,email,telephone,mobile,messa
 		Telephone:telephone,
 		Mobile:mobile,
 		Messages:messages,
+		PoliciesConsent:policiesConsent,
+		MarketingEmail:marketingConsent,
 		Timestampe:timestampes
 	});
 
@@ -262,13 +265,21 @@ function storeValueFirebase(){
 	const val_telephone=telephone.value.trim();
 	const val_mobile=mobile.value.trim();
 	const val_message=message.value;
+	const val_policy_consent=policies_consent.value;
 	var today = new Date();
 	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 	var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 	var dateTime = date+' '+time;
 
+	//check the value in the marketing consent email
+	if(marketingemail.checked === false){
+		var val_marketing_email_consent="No";
+	}else{
+		var val_marketing_email_consent=marketingemail.value;
+	}
+
 	// Save Message
-	saveMessage(val_fname,val_lname,val_companyname,val_email,val_telephone,val_mobile,val_message,dateTime);
+	saveMessage(val_fname,val_lname,val_companyname,val_email,val_telephone,val_mobile,val_message,val_policy_consent,val_marketing_email_consent,dateTime);
 
 	// Show alert
 
