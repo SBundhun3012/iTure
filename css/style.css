@@ -1399,9 +1399,9 @@ footer .getintouch strong{
 }
 
 .LI-profile-badge{
-    position: relative;
-    top:50%;
-    text-align:center;
+    position:absolute;
+    top:15%;
+    left:20%;
 }
 
 .news-article .title{
