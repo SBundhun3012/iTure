@@ -283,8 +283,9 @@ header{
     background: #FFFFFF;
     overflow: hidden;
     box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.10);
+    background-image: url("../images/Slider 6.png") ;
     padding-bottom: 90px;
-    animation: slideBg 60s linear infinite 10s;
+    animation: slideBg 90s linear infinite 25s;
     background-repeat: no-repeat;
     background-size: 100% 42%;
 }
@@ -293,19 +294,19 @@ header{
 @keyframes slideBg{
 
     0% {
-        background-image: url("https://media.istockphoto.com/photos/communication-network-concept-ai-picture-id990107150") ;
+        background-image: url("../images/Slider 6.png") ;
     }
     25% {
-        background-image: url("images/Home3.jpg");
+        background-image: url("../images/Slider 8.png");
     }
     50% {
-        background-image: url("https://media.istockphoto.com/photos/communication-network-concept-ai-picture-id990107150") ;
+        background-image: url("../images/Slider 10.png") ;
     }
     75% {
-        background-image: url("https://media.istockphoto.com/photos/concept-picture-id9576546380") ;
+        background-image: url("../images/Slider 9.png") ;
     }
     100% {
-        background-image: url("https://media.istockphoto.com/photos/communication-network-concept-ai-picture-id990107150") ;
+        background-image: url("../images/Slider 5.png") ;
     }
 
 }
